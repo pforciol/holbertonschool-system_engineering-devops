@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -type f -name "*.gif" | rev | cut -f2- -d"." | cut -d"/" -f1 | rev | LC_ALL=C sort --ignore-case
