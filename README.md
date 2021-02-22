@@ -7,3 +7,4 @@ List of the Projects:
 * [0x03. Shell, init files, variables and expansions](https://github.com/pforciol/holberton-system_engineering-devops/tree/master/0x03-shell_variables_expansions)
 * [0x04. Loops, conditions and parsing](https://github.com/pforciol/holberton-system_engineering-devops/tree/master/0x04-loops_conditions_and_parsing)
 * [0x05. Processes and signals](https://github.com/pforciol/holberton-system_engineering-devops/tree/master/0x05-processes_and_signals)
+* [0x06. Regular expression](https://github.com/pforciol/holberton-system_engineering-devops/tree/master/0x06-regular_expressions)
