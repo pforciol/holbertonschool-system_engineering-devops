@@ -1,12 +1,11 @@
 # Setup a SSH client configuration file to connect to a server with RSA key.
 
 file_line { 'Turn off passwd auth':
-  ensure => 'present',
-  path   => '/etc/ssh/ssh_config',
-  line   => '    PasswordAuthentication no',
-  }
+  path => '/etc/ssh/ssh_config',
+  line => 'PasswordAuthentication yes',
+}
+
 file_line { 'Declare identity file':
-  ensure => 'present',
-  path   => '/etc/ssh/ssh_config',
-  line   => '    IdentityFile ~/.ssh/holberton',
-  }
+  path => '/etc/ssh/ssh_config',
+  line => 'IdentityFile ~/.ssh/holberton',
+}
