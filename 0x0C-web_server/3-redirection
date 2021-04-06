@@ -7,7 +7,7 @@ apt install nginx -y
 # Index page
 echo "Holberton School" >/var/www/html/index.nginx-debian.html
 
-# Redirect to fabulous NyanCat page
-sed -i 's/listen 80 default_server;/listen 80 default_server;\n  rewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;/' /etc/nginx/sites-enabled/default
+# Redirect to fabulous Rick Astley page
+sed -i '/listen \[::\]:80 default_server;/a\        rewrite ^\/redirect_me https://www.youtube.com/watch?v=dQw4w9WgXcQ permanent;' /etc/nginx/sites-available/default
 
 service nginx restart
