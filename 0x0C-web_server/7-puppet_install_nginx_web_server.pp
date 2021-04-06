@@ -25,5 +25,5 @@ service { 'nginx':
   enable     => true,
   hasrestart => true,
   require    => Package['nginx'],
-  subscribe  => File_line['redirect_me']
+  subscribe  => File_line['Rick Astley showtime']
 }
