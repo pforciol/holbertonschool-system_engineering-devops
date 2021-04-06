@@ -2,6 +2,10 @@
 
 apt update -y && apt upgrade -y
 apt install nginx -y
+package { 'nginx':
+  ensure   => installed,
+  provider => 'apt'
+}
 
 # Index page
 echo "Holberton School" >/var/www/html/index.nginx-debian.html
