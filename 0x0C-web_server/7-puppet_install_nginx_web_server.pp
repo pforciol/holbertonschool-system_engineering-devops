@@ -1,20 +1,34 @@
 # Script that setup a nginx web server on our server + redirection.
 
-apt update -y && apt upgrade -y
-apt install nginx -y
 package { 'nginx':
   ensure   => installed,
   provider => 'apt'
 }
 
 # Index page
-echo "Holberton School" >/var/www/html/index.nginx-debian.html
+file { '/var/www/html/index.nginx-debian.html':
+  content => 'Holberton School'
+}
 
 # Redirect to fabulous Rick Astley page
-sed -i '/listen \[::\]:80 default_server;/a\        rewrite ^\/redirect_me$ https://www.youtube.com/watch?v=dQw4w9WgXcQ permanent;' /etc/nginx/sites-enabled/default
+file_line { 'Rick Astley showtime':
+  path => '/etc/nginx/sites-enabled/default',
+  after => 'listen [::]:80 default_server;',
+  line => '        rewrite ^/redirect_me https://www.youtube.com/watch?v=dQw4w9WgXcQ permanent;'
+}
 
 # 404 Page not Found
-echo "Ceci n'est pas une page" >/var/www/html/404.html
-sed -i '/dQw4w9WgXcQ permanent;$/a\        error_page 404 /404.html;' /etc/nginx/sites-enabled/default
+file { '/var/www/html/404.html':
+  source => 'https://pastebin.com/raw/szLjiB9Q'
+}
 
-service nginx restart
+file_line { 'Rick Astley showtime':
+  path => '/etc/nginx/sites-enabled/default',
+  after => 'dQw4w9WgXcQ permanent;',
+  line => '        error_page 404 /404.html;'
+}
+
+service { 'nginx':
+  ensure  => running,
+  require => Package['nginx']
+}
