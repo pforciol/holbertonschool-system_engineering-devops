@@ -4,9 +4,8 @@ exec { 'update':
 }
 
 package { 'nginx':
-  ensure   => present,
-  provider => 'apt',
-  require  => Exec['update']
+  ensure  => installed,
+  require => Exec['update']
 }
 
 # Index page
