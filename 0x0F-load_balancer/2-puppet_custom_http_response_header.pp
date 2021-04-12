@@ -36,6 +36,6 @@ file_line { 'X-Server-By header addition':
 }
 
 service { 'nginx':
-  ensure     => running,
-  require    => Package['nginx']
+  ensure  => running,
+  require => Package['nginx']
 }
