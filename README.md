@@ -15,4 +15,5 @@ List of the Projects:
 * [0x0B. SSH](https://github.com/pforciol/holberton-system_engineering-devops/tree/master/0x0B-ssh)
 * [0x0C. Web server](https://github.com/pforciol/holberton-system_engineering-devops/tree/master/0x0C-web_server)
 * [0x0D. Web stack debugging #0](https://github.com/pforciol/holberton-system_engineering-devops/tree/master/0x0D-web_stack_debugging_0)
+* [0x0E. Web stack debugging #1](https://github.com/pforciol/holberton-system_engineering-devops/tree/master/0x0E-web_stack_debugging_1)
 * [0x0F. Load balancer](https://github.com/pforciol/holberton-system_engineering-devops/tree/master/0x0F-load_balancer)
